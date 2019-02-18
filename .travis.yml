@@ -1,0 +1,14 @@
+language: python
+python:
+- '3.6'
+install:
+- pip install -r requirements.txt
+script:
+- pytest
+deploy:
+  provider: heroku
+  app: dunamis-smarthome-api
+  on:
+    repo: teamdunamis/smarthome-api
+  api_key:
+    secure: s97R6a2OVIBWCNyHqfc9tsYr7C4wJDrMYKlJMuyRgmeyjDsaCkF8zK+L38z5nwMPqWmIIiyf9+R3kwdKmv4nur8sXht0IY7RPRk+grTW+Y9uLufDjT9GjCRaKpobJoOg6tlbn2dCLrSnn9d5X7BFc1ANEUoTBFdsH2tlYmRFETSXJ30IPd46fZq2BDeGuxwjFhQo1MeCJCGyXs9AWSwTz2GYJJm+i5wRAcU1to7YAqXi1jwlLOzCSMgQ5CaaUtK0Awl4CUhQIBe3KzLkQUOv5+mjQkHb4X466F/tbl0nn42wIKx1QDwXA80v2JxMKhDzHfLkeO1oE8ZVf0kvdu8NZ3uOilEfngLVrsg45DFSO6qzL54+NRqcn0xCrSi3VzYhvqKyaHehnY4n9K71yVk6bm76dslMpIHalXK1coXvh89zehlwmPwhHJTxgg/1sQb9r/FgExYZZjfOammOet2y2lJkDWa/oM79DowQSSMaoS7h75VgBaQB3CwDe2lac3mNXwfTLOoMNimV+jKZU/LlYY3SVN+FAGAjqCYZaT8swxcroMJvZiOPww26UfdY5YaDNXkMPBRFGF3VA//jCDArO9iHUVIc/biT31E2WFmSUiBoWGbymtJvM50wjUNRDY3ElcQp8f/e2x93Vr/JrYZ0HEY3b7cU5v/28Jd8gkv6aKE=
